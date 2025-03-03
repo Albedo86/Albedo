@@ -1,0 +1,1854 @@
+define bit_right = Position(xalign=0.75, yalign=1.0)
+define bit_left = Position(xalign=0.25, yalign=1.0)
+
+define u = Character("Unknow")
+define u2 = Character("Unknow2")
+define g1 = Character("Girl 1")
+define g2 = Character("Girl 2")
+define m = Character("Man")
+define kn = Character("Knight")
+
+define a = Character(('Albedo'), color = "#DE4747")
+define r = Character(('Rika'), color="#40BCFA")
+define l = Character(('Lancelot'), color ="#B143B5")
+define k = Character(('Katharina'), color="#D54141")
+define b = Character(('Belmont'), color="#B4742B")
+
+image men = "Guy_1.png"
+
+image Albedo angry = "Albedo angry.png"
+image Albedo sad = "Albedo sad.png"
+image Albedo normal = "Albedo normal.png"
+image Albedo shock = "Albedo shock.png"
+image Albedo smile = "Albedo smile.png"
+image Albedo b = "Albedo black.png"
+
+image Rika_c normal = "Rika_collage_normal.png"
+image Rika_c t = "Rika_c think.png"
+image Rika_c e = "Rika_c close eyes.png"
+
+image Rika normal = "Rika_normal.png"
+image Rika s = "Rika_shock.png"
+image Rika a1 = "Rika_angry1.png"
+image Rika a2 = "Rika_angry2.png"
+image Rika sm = "Rika_smile.png"
+image Rika sd = "Rika_sad.png"
+image Rika b = "Rika_black.png"
+
+image Kat normal = "Katarina_normal.png"
+image Kat s = "Katarina_shock.png"
+image Kat j = "Katarina_joke.png"
+image Kat b = "Katarina_black.png"
+
+image Lan normal = "Lancelot_normal.png"
+image Lan s = "Lancelot_shock.png"
+image Lan sm = "Lancelot_smile.png"
+image Lan t = "Lancelot_think.png"
+image Lan b = "Lancelot_black.png"
+image Lan unknown = "Lancelot_unknown.png"
+
+image Bel normal = "Belmont_normal.png"
+image Bel s = "Belmont_smile.png"
+image Bel b = "Belmont_black.png"
+
+image Gil normal = "Gilgamesh_normal.png"
+image Gil s = "Gilgamesh_smile.png"
+image Gil b = "Gilgamesh_black.png"
+
+image bg bed =  "bedroom.jpg"
+image bg bed_n = "bedroom_night.jpg"
+image bg bath = "bathroom.jpg"
+image bg bus = "BusStop_Summer_Day.png"
+image bg lake = "lake.jpg"
+image bg lake_f = "lake_fog.jpg"
+image bg school = "school.jpg"
+image bg lake_s = "lake_someone.jpg"
+image bg feast = "feast.png"
+image bg garden = "garden.png"
+image bg bed_r = "bed.png"
+image bg bed_d = "Bedroom_day.jpg"
+
+label start:
+
+    scene black
+
+    "ณ ดินแดนแสนไกล"
+
+    "มีเรื่องเล่าขานราวกับนิทานพื้นบ้านอยู่เรื่องหนึ่ง..."
+
+    $ renpy.movie_cutscene("Tomorrow_NEW.webm")
+    
+    play sound "audio/Ding.mp3"
+
+    "CHAPTER 1 : ความปราถนา"
+
+    play music "audio/The Remembrance.mp3" fadeout 1.0 fadein 1.0
+
+    scene bg bed
+    play sound "audio/Clock Ring.mp3"
+
+    "ในยามเช้าคุณตื่นขึ้นมาเพราะเสียงนาฬิกาปลุกที่ดังสนั่น"
+
+    r "อืม..."
+
+    stop sound
+
+    show Rika_c e at left
+    with dissolve
+
+    "คุณเอื้อมมือไปปิดมันก่อนจะลุกจากเตียง"
+
+    show Rika_c normal at left
+    with dissolve
+
+    r "เช้าแล้วหรอเนี่ย..."
+
+    hide Rika_c e with dissolve
+
+    "จากนั้นก็ไปอาบน้ำเเต่งตัวเตรียมไปมหาลัย"
+
+    scene bg bus
+    with fade
+
+    "คุณนั่งรอรถเมย์อยู่สักพักก่อนที่รถจะมา"
+
+    "ชีวิตของคุณไม่ค่อยมีสีสันสักเท่าไหร่นักเป็นชีวิตวนหลูบเดิมๆ ตอนอยู่ห้องเรียนคุณเเทบไม่ได้เสวนากับใครเลยถ้าเรียกง่ายๆก็คงบอกว่าไม่มีเพื่อนนั่นเเหละ"
+
+    "สิ่งเดียวที่ยังทำให้คุณมีรอยยิ้มคือเสียงเพลง คุณไม่รู้ว่ามันเริ่มขึ้นได้ยังไงเมื่อกลับจากมหาลัยคุณมักใส่หูฟังเปิดเพลงเเละเดินไปมาภายในบ้านที่ไม่มีใคร"
+
+    play sound "audio/Footsteps.mp3"
+
+    "มีเพียงเสียงฝีเท้าของคุณเท่านั้นเเต่น่าเเปลกที่คุณมักคิดถึงชายคนหนึ่งอยู่เสมอ คุณเห็นตัวของเขาเเต่คุณกลับไม่เห็นใบหน้าของเขาไม่ว่าจะพยายามนึกเเค่ไหนก็ตาม"
+
+    "เพราะอะไรกันนะ?"
+
+    "คุณไม่รู้ว่าทำไมคุณถึงคิดถึงชายคนนั้นที่น่าเเปลกกว่านั้นคือทำไมคุณถึงรู้สึกผูกพันกับเขา ความรู้สึกนี้เพิ่มขึ้นทุกวันๆ"
+
+    stop sound
+
+    show Rika_c t at left
+    with dissolve 
+
+    r "เหงาจัง..."
+
+    hide Rika_c t with dissolve
+
+    "..."
+
+    scene bg lake
+    with fade
+
+    "เช้าวันนี้ก็ยังคงเป็นวันธรรมดาที่ไม่มีอะไรพิเศษเพียงเเต่ในช่วงเย็นของวันนี้คุณที่ปกติจะกลับบ้าน ทันทีหลังเลิกเรียนกลับมาที่ทะเลสาบไม่ไกลจากตัวเมืองมากนัก"
+
+    "เพราะในเย็นวันนี้ที่มหาลัย..."
+
+    scene bg school
+    with fade
+    show girl_1 at left with dissolve
+    show girl_2 at right with dissolve
+
+    g1 "นี่ๆ เคยได้ยินรึเปล่า เค้าบอกกันว่าที่ทะเลสาปใกล้ๆนี้เคยมีเรื่องน่าสนใจด้วยนะ"
+
+    g2 "อะไรงั้นหรอ?"
+
+    g1 "เค้าว่ากันว่าถ้าไปขอพรที่ทะเลสาบเเห่งนี้พรที่ขอจะสมหวังหล่ะ"
+
+    g2 "จริงหรอๆ!"
+
+    r "(ก็เเค่เรื่องเเต่งขึ้น น่าสนใจตรงไหนกัน)"
+
+    scene bg lake
+    with fade
+    show Rika_c e at left
+    with dissolve
+
+    r "..."
+
+    "เเต่สุดท้าย....ก็ลงเอยตามที่เห็นถึงตัวจะพูดอย่างงั้นเเต่สุดท้ายก็มาอยู่ดี"
+
+    show Rika_c t at left
+    with dissolve
+
+    r "นี่ฉันเชื่อคำพูดไร้เเก่นสารเเบบนั้นเนี่ยนะ"
+
+    r "กลับดีมั้ยนะ"
+
+    hide Rika_c t with dissolve
+
+menu:
+ 
+    "กลับบ้านดีกว่า":
+       "คุณเปลี่ยนใจแล้วเลือกที่จะเดินกลับบ้านของคุณ"
+
+       jump normal_end
+
+    "อยู่ต่อก็ไม่เสียหาย":
+       show Rika_c normal at left
+       with dissolve
+
+       r "ไหนๆก็มาเเล้วขอสักรอบจะเป็นไรไป"
+
+       hide Rika_c normal with dissolve
+
+       jump after_menu
+
+label after_menu:
+
+    "เวลาที่คุณมาคือช่วงกลางคืนเเต่ก็ยังมีผู้คนอยู่จำนวนหนึ่งที่มาขอพร คุณจึงเดินออกจากผู้คนก่อนจะเดินตามขอบทะเลสาบไปเรื่อยๆ"
+
+    "พอรู้สึกว่าไม่มีใครเเล้วคุณจึงหยุดเดินยกมือมากุมกันที่หน้าอกหลับตาเเละก้มหน้าลงเล็กน้อย เพราะไม่มีอะไรจะเสียคุณจึงตัดสินใจลองอธิฐานด้วยความหวังของคุณทั้งหมด"
+
+    show Rika_c e at left
+    with dissolve
+
+    r "ขอร้องล่ะ ได้โปรดสมหวังที..."
+
+    play sound "audio/Star.mp3"
+
+    hide Rika_c e with dissolve
+
+    "เเต่จู่ๆคุณก็รู้สึกว่าที่ๆคุณอยู่นั้นไม่ได้มีเเค่คุณ"
+    
+    play sound "audio/Foggy.mp3"
+    scene bg lake_s
+    with fade
+
+    "คุณมองทอดสายตาไปไกลก็เห็นชายคนหนึ่งยืนอยู่อีกฝั่งของทะเลสาบ ชายคนนั้นสวมชุดสีดำมิดชุดของเค้าดูเเปลกราวกับว่าหลุดมาจากอีกโลก"
+
+    "ชุดนั้นทำให้คุณรู้สึกคุ้นเคยอย่างบอกไม่ถูก"
+    
+    stop sound
+
+menu:
+
+    "ยืนรอ":
+        "แต่คุณก็เลือกที่จะยืนรออยู่อย่างนั้น"
+
+        jump stay
+
+    "วิ่งไปหา":
+        "คุณวิ่งเข้าไปหาเขา"
+
+        jump water_end
+
+
+
+
+
+
+
+
+
+
+       
+label stay:
+
+    "ราวกับคุณเคยพบเขาที่ไหนสักเเห่งเเต่น่าเสียดายเพราะความระยะห่างของฝั่งทะเลสาบทำให้คุณมองไม่เห็นใบหน้าของเขา"
+
+    play music "audio/Foggy.mp3" fadein 1.0 fadeout 1.0
+    scene bg lake_f
+    with fade
+
+    "ระหว่างที่คุณกำลังคิดอยู่นั้นดูเหมือนว่าชายคนนั้นจะสังเกตเห็นคุณเช่นกัน เเต่ยังไม่ทันจะได้ทำอะไรจู่ๆก็มีหมอกมากมายเกิดขึ้นจนทำให้เเทบมองไม่เห็นทาง"
+
+    scene bg lake
+    with fade
+    play music "audio/The Remembrace.mp3" fadein 1.0 fadeout 1.0
+
+    "ผ่านไปเเป๊ปเดียวหมอกนั้นก็หายไปคุณมองไปยังอีกฝั่งของทะเลสาปอีกครั้งเเต่ก็ไม่พบใคร"
+
+    "คุณยืนอยู่ตรงนั้นสักพักพอให้รู้สึกถึงอากาศเย็นๆที่ถูกพัดมาพร้อมลมในตอนกลางคืน"
+
+    "คุณเเอบกลัวกับเหตุการณ์เมื่อครู่เล็กน้อยจึงตัดสินใจเดินออกจากทะเลสาบเเละเดินทางกลับบ้าน"
+
+    scene bg bed_n
+    with fade
+    show Rika_c t at left
+    with dissolve
+
+    r "เหนื่อยชะมัด"
+    
+    hide Rika_c t with dissolve
+
+menu:
+
+    "นอน":
+        "เมื่อถึงบ้านคุณที่ยังไม่ทันจะได้อาบน้ำก็เอนตัวลงนอนเพราะความเหนื่อยล้าเเละความง่วงทำให้คุณหลับไปโดยไม่รู้ตัว"
+
+        jump before_ch2
+
+    "อาบน้ำ":
+        "แม้จะง่วงแต่คุณก็เลือกที่จะไปอาบน้ำก่อน"
+
+        scene bg bath
+        with fade
+        show Rika_c normal at left
+        with dissolve
+        play music "audio/Shower.mp3" fadein 1.0 fadeout 1.0
+
+        r "สบายดีจัง..."
+
+        r "คนๆนั้น... เหมือนใครกันนะ"
+
+        r "อา...อัล"
+
+        r "อัลเบ..."
+
+        show Rika_c t at left
+        with dissolve
+
+        r "..."
+
+        r "นี่ฉันพูดอะไรเนี่ย"
+
+        hide Rika_c t with dissolve
+        scene bg  bedroom_n
+        play music "audio/The Remembrace.mp3" fadein 1.0 fadeout 1.0
+
+        jump before_ch2 
+        
+
+
+
+
+
+
+
+
+
+label before_ch2:
+
+    scene black
+    with dissolve
+
+    r "ตอนนั้นมันอะไรกัน..."
+
+    "..."
+
+    play music "audio/feast.mp3" fadein 1.0 fadeout 1.0
+
+    r "?"
+
+    r "เสียงอะไรเนี่ย..."
+
+    scene bg feast
+    with fade
+
+    "เสียงจอเเจของผู้คนมากมายดังขึ้นจนคุณต้องลืมตาเเละมองไปรอบๆก่อนพบว่า ที่ๆคุณอยู่นั้นไม่ใช่ห้องนอนหรือบ้านของคุณเเต่มันกลับเป็นงานเลี้ยงในห้องโถงใหญ่ตระกานตา"
+
+    "ชุดของผู้คนในนั้นราวกับมาจากอีกยุคเเต่คุณก็เคยเรียนประวัติศาสตร์จึงจำได้ว่าชุดที่พวกเขาใส่นั้นเป็นชุดของชนชั้นสูง"
+
+    "คุณยังคงนั่งนิ่งด้วยความมึนงงกับสิ่งที่เกิดขึ้น"
+
+    show Rika normal at left
+    with dissolve
+
+    r "ที่นี่ที่ไหนกัน?"
+
+    hide Rika normal with dissolve
+
+    stop music
+
+    scene black
+    with dissolve
+
+    "END CHAPTER 1"
+
+    jump chapter_2
+
+
+
+
+
+
+
+
+
+
+
+
+label chapter_2:
+
+    scene black
+    
+    play sound "audio/Ding.mp3"
+    "CHAPTER 2 : งานเลี้ยง"
+
+    scene bg feast
+    with fade
+    play music "audio/feast.mp3" fadein 1.0 fadeout 1.0
+
+    "คุณที่จู่ๆก็พบว่าตัวเองนั้นไม่ได้อยู่ภายในห้องนอนเเต่กลับเป็นห้องโถงขนาดใหญ่ตระกานตา ทำได้เพียงนั่งยังเก้าอี้ด้วยสีหน้ามึนงงโดยมีอาหารมากมายวางด้านหน้า"
+
+    "คุณมองสำรวจรอบข้างเเละพบว่าเครื่องเเต่งกายของผู้คนนั้นช่างดูสวยสง่าเเปลกตา ราวกับหลุดมาจากอีกยุคอีกสมัย"
+
+    "ชุดที่ดูราวผู้มีฐานะ เครื่องประดับระยิบระยับ โต๊ะอาหารพร้อมเเก้วไวน์มากมาย ห้องที่หรูหราเยี่ยงราชวังค์"
+
+    "ดูยังไงก็ไม่ใช่ที่ๆคุณควรอยู่เเละก็ไม่ใช่ยุคสมัยที่คุณอยู่เช่นกัน"
+
+    "เเต่เมื่อคุณมองมายังตัวเองก็พบว่ามันนั้นไม่ใช่ชุดทำงานที่คุณลืมเปลี่ยนก่อนเข้านอนเเต่เป็นชุดเดรสที่ดูหรูหรา"
+
+    show Rika s at left
+    with dissolve
+
+    r "(อะ...อะไรกันทำไมชุดฉันถึง...)"
+
+    show Rika b at left
+    with dissolve
+
+    "ยังไม่ทันจะเรียบเรียงสิ่งต่างๆได้ จู่ๆก็มีชายผมคนหนึ่งเดินเข้ามาหาคุณพร้อมมือที่ถือเเก้วไวน์"
+
+    show Lan unknown at right
+    with dissolve
+
+    u "ไม่ทราบว่าข้าสามารถนั่งที่ตรงนี้ได้มั้ย"
+
+    show Rika s at left
+    with dissolve
+
+    r "ดะ ได้ค่ะ"
+
+    show Rika b at left
+    with dissolve
+    
+    "จากนั้นชายคนนั้นจึงนั่งลงยังเก้าอี้ถัดจากคุณพร้อมว่างเเก้วไวน์ลงยังโต๊ะ คุณตัวเเข็งทื่อไม่พูดอะไรสายตามองต่ำไม่สบตา"
+
+    u "ถ้าไม่ว่าอะไรข้าขอถามชื่อของเลดี้ได้มั้ย"
+
+    show Rika normal at left
+    with dissolve
+
+    r "ฉะ...ฉันชื่อว่า-"
+    
+    show Rika b at left
+    with dissolve
+
+    "ในตอนที่คุณรีบที่จะตอบคำถามนั้นคุณได้เงยหน้าไปมองเขา"
+
+    show Lan sm at right 
+    with dissolve
+
+    "ผมสีม่วงกับใบหน้าที่ดูอ่อนโยนมองมาที่คุณ รอยยิ้มอ่อนๆของเขาทำให้คุณชะงักไปครู่หนึ่ง"
+
+    "เพราะคุณมัวเเต่ก้มหน้าจึงไม่ได้มองสังเกตใบหน้าของเขาในตอนเเรก"
+
+    u "ข้าพูดอะไรผิดไปรึเปล่า"
+
+    show Lan b at right
+    with dissolve
+
+    show Rika s at left
+    with dissolve
+
+    r "ป-เปล่าค่ะ! คือ..ฉันชื่อ ริกะ ค่ะ"
+
+    show Rika b at left
+    with dissolve
+
+    show Lan sm at right
+    with dissolve
+
+    l "ชื่อของข้าคือ เเลนซาลอต เป็นอัศวินข้างกายของกษัตริย์ยินดีที่ได้รู้จัก..."
+
+    l "เหตุใดเลดี้ถึงนั่งอยู่คนเดียวกัน"
+
+    hide Rika b with dissolve
+    hide Lan sm with dissolve
+
+
+menu:
+
+    "ตามน้ำ":
+        show Rika b at left
+        with dissolve
+        show Lan b at right
+        with dissolve
+        show Rika normal at left
+        with dissolve
+
+        r "เอ่อ...เพราะฉันไม่รู้จักใครเเล้วก็ไม่ถนัดการทักทายคนอื่นน่ะค่ะ"
+
+        show Rika b at left
+        with dissolve
+
+        "คุณตอบตามน้ำไปเพราะจริงๆคุณก็เป็นคนอย่างงั้นเเละก็เคยถูกถามเเบบนี้อยู่หลายครั้งหลายคราว"
+
+        jump chapter_2_1
+
+    "บอกความจริง":
+        show Rika b at left
+        with dissolve
+        show Lan b at right
+        with dissolve
+        show Rika normal at left
+        with dissolve
+
+        r "คือว่าจริงๆแล้วฉันไม่รู้ว่าที่นี่คือที่ไหนและอยู่ที่นี่ได้ยังไง"
+
+        show Rika b at left
+        with dissolve
+        show Lan sm at right
+        with dissolve
+
+        l "(หัวเราะ) เลดี้มีอารมณ์ขันดีนะครับ"
+
+        show Lan b at right
+        with dissolve
+
+        show Rika normal at left
+        with dissolve
+
+        r "ฉ- ฉันพูดจริงๆนะคะ!"
+
+        show Rika b at left
+        with dissolve
+        show Lan sm at right
+        with dissolve
+
+        l "ก็ได้ครับถ้าเลดี้พูดแบบนั้น"
+
+        jump chapter_2_1
+
+
+
+
+
+
+
+
+
+label chapter_2_1:
+
+    hide Rika normal with dissolve
+    hide Lan sm with dissolve
+
+    "หลังจากนั้นเขาก็เริ่มเปิดบทสนทนาต่างๆมาพูดคุยกับคุณ"
+
+    "อาจเป็นเพราะสีหน้าเเละน้ำเสียงทุ้มที่ดูอ่อนโยนทำให้คุณรู้สึกสบายใจ เมื่อพูดคุยกับเขาพร้อมทำให้คุณรู้สึกคุ้นชินกับสภาพเเวดล้อมไปโดยไม่รู้ตัว"
+
+    "คุณทั้งสองพูดคุยกันอยู่พักใหญ่ก่อนที่เขาจะพูดขึ้น"
+
+    show Lan sm at right
+    with dissolve
+
+    l "จริงสิ เลดี้บอกว่าไม่ถนัดทักทายผู้อื่นสินะ เช่นนั้นข้าอาสาพาไปทักทายเเขกคนอื่นๆดีมั้ย"
+
+    hide Lan sm with dissolve
+
+menu:
+
+    "ตกลง":
+        "คุณตอบตกลงก่อนที่จะลุกออกจากโต๊ะที่นั่งอยู่แล้วเดินตามหลังของเขาไป"
+
+        "จากนั้นก็เริ่มทักทายเเขกคนอื่นๆหลังจากที่ได้พูดคุยกับเเลนซาลอตก็ทำให้คุณเเน่ใจในระดับหนึ่ง ว่ายุคสมัยที่คุณอยู่นี้อาจจะเป็นยุคอัศวิน"
+
+        "ที่ๆคุณอยู่ก็คือภายในราชวังค์ของกษัตริย์ซึ่งจัดขึ้นเพื่อพบปะกับเหล่าผู้ใต้บรรชา หรือขุนนางเพื่อให้เหล่าขุนนางมีสัมพันธุ์ต่อกัน"
+
+        "พูดง่ายๆก็คือ งานเลี้ยงกระชับมิตรนั่นเเหละ เเละเพราะยุคสมัยที่ต่างทำให้คุณพยายามปรับคำพูดให้เข้ากับยุคสมัยให้มากที่สุดเท่าที่ความรู้ของคุณมี"
+
+        "คุณเเอบเเปลกใจเล็กน้อยในตอนที่ทักทายเเขกคนอื่นๆเพราะพวกเขาดูให้ความเคารพเเลนซาลอตเป็นพิเศษ"
+
+        "คุณมีข้อสงสัยมากมายในหัวเต็มไปหมด เมื่อทักทายเเขกคนนึงเสร็จคุณที่กำลังจะถามเขาก็โดนขัดไว้เสียก่อน"
+
+        show Kat j at bit_right with dissolve
+
+        u "โอ้~ ดูสินั่นใคร"
+
+        show Kat b with dissolve
+
+        "เสียงทักที่ดังขึ้นจากทางด้านข้างของคุณ คุณจึงหันไปตามเสียงนั้น"
+
+        "ทำให้เห็นหญิงสาวผมเเดงสดในตาสีฟ้าอมม่วงสวมชุดเดรสกระโปรงยาวสีขาวเเดงดูสวยสง่า เเต่ท่าทางเเละคำพูดดูห้าวหาญราวกับชาย"
+
+        show Rika b at left
+        with dissolve
+        show Lan t at bit_left
+        with dissolve
+
+        l "เจอกันจนได้สินะ"
+
+        show Lan b at bit_left
+        with dissolve
+
+        show Kat j at bit_right with dissolve
+
+        u "อะไรกัน~ นายทำเป็นไม่อยากเจอกันอย่างงั้นเเหละ"
+
+        show Kat b at bit_right with dissolve
+        show Bel normal at right with dissolve
+
+        u2 "คุณหนูโปรดใช้คำพูดอย่างสุภาพด้วย"
+
+        show Bel b at right with dissolve
+        show Kat normal at bit_right with dissolve
+
+        u "เข้าใจเเล้วน่า..."
+
+        show Kat b at bit_right with dissolve
+
+        "เธอทำหน้าเบื่อหน่ายเล็กน้อย เเต่ในตอนนั้นเองดูเหมือนเธอเพิ่งจะสังเกตเห็นคุณที่ยื่นอยู่ข้างหลังของเเลนซาลอต"
+
+        show Kat s at bit_right with dissolve
+
+        u "โอ๊ะ...อะไรกัน นี่เจ้าไปจีบหญิงมางั้นหรอ"
+
+        show Kat b at bit_right with dissolve
+        show Lan normal at bit_left with dissolve
+
+        l "เมื่อกี้ เบลมอนท์ ก็บอกเจ้าเเล้วหนิว่าให้พูดอย่างสุภาพน่ะ"
+
+        show Lan b at bit_left with dissolve
+        show Kat normal at bit_right with dissolve
+
+        u "โอเคๆ เข้าใจเเล้วข้าเเค่ล้อเล่น สรุปผู้หญิงคนนั้นใครกันข้าไม่เคยเห็นหน้ามาก่อนเลย"
+
+        show Kat b at bit_right with dissolve
+
+        "หญิงสาวเลิกล้อเล่นก่อนถามอย่างจริงจัง เเลนซาลอตจึงมองมาที่คุณ คุณเข้าใจสายตาของเขาทันที"
+
+        hide Rika b with dissolve
+        hide Lan b with dissolve
+        hide Kat b with dissolve
+        hide Bel b with dissolve
+
+        jump chapter_2_2
+
+    "ปฏิเสธ":
+        show Rika normal at left with dissolve
+        show Lan b at right with dissolve
+
+        r "ขอบคุณค่ะ แต่ฉันขอปฏิเสธดีกว่าค่ะ"
+
+        show Rika b at left with dissolve
+
+        jump ปฏิเสธ
+
+
+label chapter_2_2:
+
+menu:
+
+    "แนะนำตัว":
+        show Rika normal at left with dissolve
+        show Lan b at bit_left with dissolve
+
+        r "ยินดีที่ได้รู้จักค่ะ ฉันชื่อว่า ริกะ ค่ะ"
+
+        show Rika b at left with dissolve
+
+        jump chapter_2_3
+
+label chapter_2_3:
+
+    show Kat normal at bit_right with dissolve
+
+    k "งั้นหรอยินดีที่ได้รู้จัก ฉันชื่อว่า เเคทธารีน่า วิคเตอเรียส เรียกว่า แคท ก็ได้ส่วนนี่..."
+
+    show Kat b at bit_right with dissolve
+    show Bel s at right with dissolve
+
+    b "ยินดีที่ได้รู้จักข้ามีชื่อว่า เบลมอนท์...เบลมอนท์ เเบนเดอเลอร์ เป็นคนรับใช้ส่วนตัวของคุณหนูเเคทธาลีน่า"
+
+    show Bel b at right with dissolve
+
+    hide Rika b with dissolve
+    hide Lan b with dissolve
+    hide Kat b with dissolve
+    hide Bel b with dissolve
+       
+    "จากนั้นคุณทั้งสี่คนก็ได้พูดคุยกันหัวข้อสนทนานั้นก็เป็นเพียงเรื่องสัพเพเหระทั่วไป"
+
+    "การได้พูดคุยกับ เเคท ทำให้คุยได้รู้ว่าจริงๆเเล้วเธอไม่ใช่คนไม่ดีเเต่อย่างไร เพียงเเต่มีนิสัยชอบหยอกล้อเเละไม่ถนัดพูดเเบบขุนนางสักเท่าไหร่"
+
+    "ระหว่างที่กำลังสนทนากันอย่างเพลิดเพลินในตอนนั้นเอง สายตาของคุณก็ได้เหลือบไปเห็นใครบางคนคุณจึงขอแยกตัวจากกลุ่มสนทนาสักครู่"
+
+label chapter_2_4:
+
+    "ชายผมดำสนิดเเละชุดสีดำพร้อมผ้าคลุมยาวไม่ว่าจะมองสักกี่ทีก็ยังดูสง่าเเม้เห็นเพียงข้างหลัง ความรู้สึกคุ้นเคยเเล่นผ่านตัวของคุณอย่างรวดเร็ว"
+
+    r "(นั่นเขาหรอ...)"
+
+    "ไม่หรอกจะเป็นเขาไปได้ยังไงกัน ความสงสัยถาโถมเข้าหาคุณ"
+
+    "ระหว่างนั้นความตื่นเต้นเเละคาดหวังก็เกิดขึ้นในใจคุณ คนที่คุณปราถนาที่จะได้พบมากที่สุดเเละเป็นคนที่คุณกล้าบอกว่าเป็นดั่งคนสำคัญเเม้ไม่เคยพบมาก่อน"
+
+    "ถ้าการหลุดมาต่างยุคสมัยยังเกิดขึ้นได้ถ้าอย่างงั้นทำไมการได้พบเขาในที่เเห่งนี้จะเป็นไปไม่ได้กัน"
+
+    show Lan normal at right with dissolve
+
+    l "มีอะไรรึเปล่า?"
+
+    show Lan b at right with dissolve
+    show Rika s at left with dissolve
+
+    r "ป-เปล่าค่ะ"
+
+    show Rika normal at left with dissolve
+
+    r "ทุกคนคุยกันไปก่อนได้เลยนะคะเดี๋ยวฉันกลับมา"
+
+    show Rika b at left with dissolve
+    hide Lan b with dissolve
+    hide Rika b with dissolve
+
+    "คุณออกจากวงสนทนาทันทีก่อนที่จะรีบตรงดิ่งไปที่โต๊ะของเขา"
+
+    stop music
+    scene black
+    with dissolve
+
+    "END CHAPTER 2"
+
+    jump chapter_3
+
+
+
+
+
+
+
+
+
+
+label chapter_3:
+
+    play sound "audio/Ding.mp3"
+    "CHAPTER 3 : พบกัน"
+
+    scene bg feast
+    with fade
+    play music "audio/feast.mp3"
+
+    show Rika s at left with dissolve
+
+    r "คือว่า!..."
+
+    show Rika b at left with dissolve
+
+    "คุณทักเขาด้วยความตื่นเต้นและประหม่า"
+
+    show  Albedo normal at right with dissolve
+
+    a "มีอะไรงั้นหรอ"
+
+    show Albedo b at right with dissolve
+
+    "เขาหันมาถามคุณด้วยสีหน้าประหลาดใจ"
+
+    "แต่คุณก็นิ่งเงียบพร้อมจ้องใบหน้าของเขา ใบหน้าของคนที่คุณอยากเห็นมากที่สุด"
+
+    show Albedo normal at right with dissolve
+
+    a "มีอะไรก็ว่ามาสิ"
+    
+    show Albedo b at right with dissolve
+    show Rika s at left with dissolve
+
+    r "!"
+
+    show Rika normal at left with dissolve
+
+    r "จ...จริงๆแล้วฉันอยากมารินไวน์ให้สักแก้วเพื่อเป็นการทักทายค่ะ"
+
+    show Rika b at left with dissolve 
+    hide Rika b with dissolve
+    hide Albedo b with dissolve
+
+    "คำพูดของคุณกระตุกกระตักแถมใบหน้าก็เต็มไปด้วยความประหม่า และชายหนุ่มก็สังเกตเห็นมันแต่ก็ไม่ได้พูดอะไรออกไป"
+
+    "คุณจึงเดินไปยังโต๊ะที่ใกล้ที่สุดแล้วหยิบขวดไวน์"
+
+    "ซึ่งบนโต๊ะนั้นมีอยู่ 2 ขวด"
+
+menu:
+
+    "ไวน์แดง":
+        "คุณเลือกขวดไวน์แดง"
+
+        jump chapter_3_1
+
+    "ไวน์ขาว":
+        "คุณเลือกขวดไวน์ขาว"
+
+        jump white_wine
+
+
+
+
+
+
+
+
+
+label chapter_3_1:
+
+    "หลังได้ขวดไวน์คุณก็เดินกลับไปหาชายหนุ่ม"
+
+    scene bg feast 
+    with vpunch
+
+    "แต่ทันใดนั้นขาไม่รักดีก็ดันสดุดกันซะเองก่อนที่ตัวของคุณจะเอนไปข้างหน้า"
+
+    r "(ไม่นะจะล้มแล้ว!!!)"
+
+    scene black
+    with fade
+    play sound "audio/Bodyfall.mp3"
+
+    "คุณคิดในใจขณะหลับตาสนิท ขวดไวน์ในมือก็พลันหลุดออกจากมือ"
+
+    "ตอนที่คุณคิดว่าจะล้มลงไปนั้นกลับมีมือคู่หนึ่งมาพยุงคุณเอาไว้ ก่อนที่จะมีเสียงแตกดังขึ้น"
+
+    stop music
+
+    play sound "audio/Winebreak.mp3"
+    "เพล้ง!"
+
+    "เสียงนั้นดังไปทั่วห้องโถงจนทุกบทสนทนาต้องหยุดชะงัก ทุกความสนใจพุ่งมายังที่มาของเสียงทันที"
+
+    "ส่วนตัวคุณนั้นอยู่ภายในอ้อมแขนของเขา ใบหน้าแนบชิดกับอกของเขาจนรู้สึกได้ถึงความร้อนที่แผ่ออกมาผ่านชุดสำดำนั้น"
+
+    "..."
+
+    scene bg feast
+    with fade
+
+    show Lan b at left with dissolve
+    show Kat s at bit_left with dissolve
+
+    k "เกิดอะไรขึ้นเป็นอะไรรึเปล่า!"
+
+    show Kat b at bit_left with dissolve
+    show Rika normal at bit_right with dissolve
+
+    r "ไม่เป็นไร แค่ทำขวดไวน์ตกน่ะ"
+
+    show Rika b at bit_right with dissolve
+    hide Rika b with dissolve
+    hide Kat b with dissolve
+    hide Lan b with dissolve
+    show Albedo normal at right with dissolve
+
+    a "ทุกท่านไม่ต้องกังวลข้าปลอดภัยดี เชิญทุกท่านสนุกกับงานต่อเถิด"
+
+    show Albedo b at right with dissolve
+    play music "audio/feast.mp3" fadein 1.0 fadeout 1.0
+
+    "ชายหนุ่มกล่าวเช่นนั้นก่อนที่สถานการณ์ภายในโถงจะสงบลง"
+
+    show Lan s at left with dissolve
+
+    l "ฝ่าบาทท่านเป็นอะไรมั้ย!"
+
+    show Lan b at left with dissolve
+    show Albedo normal at right with dissolve
+
+    a "ข้าไม่เป็นไร... เจ้าไม่ต้องกังวล..."
+
+    show Albedo b at right with dissolve
+    show Lan normal at left with dissolve
+
+    l "เอ่อ... แล้วขวดไวน์..."
+
+    show Lan b at left with dissolve
+    show Albedo normal at right with dissolve
+
+    a "เดี๋ยวให้พวกคนใช้มาเก็บกวาดอย่าเผลอไปเหยียบซะล่ะ"
+
+    show Albedo b at right with dissolve
+
+    "พูดจบไม่นานก็มีคนใช้เข้ามาเก็บกวาดเศษแก้วที่แตก"
+
+    hide Lan b with dissolve
+
+    "จากนั้นเขาก็หันความสนใจกลับมาหาคุณ"
+
+    show Albedo normal at right with dissolve
+
+    a "ไม่เป็นไรใช่มั้ย"
+
+    show Albedo b at right with dissolve
+
+    "เขากล่าวถามเบาๆ"
+
+    show Rika s at left with dissolve
+
+    r "ค-ค่ะ"
+
+    show Rika normal at left with dissolve
+
+    r "ค... คือว่าเมื่อกี้ขอโทษจริงๆนะคะ"
+
+    show Rika b at left with dissolve
+    show Albedo normal at right with dissolve
+
+    a "ช่างมันเถอะ วันหลังก็ระวังซะบ้างล่ะ"
+
+    show Albedo b at right with dissolve
+    show Rika normal at left with dissolve
+
+    r "ถ้าไม่รังเกียจ คุณสน-"
+
+    show Rika b at left with dissolve
+    hide Albedo b with dissolve
+    show Gil normal at right with dissolve
+
+    u "เมื่อกี้เกิดอะไรขึ้นงั้นหรอ"
+
+    show Gil b at right with dissolve
+
+    "คำพูดจากชายหนุ่มผมทองในตาสีแดงท่าทางเย่อหยิ่งก็ขัดประโยคของคุณ"
+
+    show Albedo normal at bit_right with dissolve
+
+    a "แค่เรื่องเล็กน้อยเจ้าไม่ต้องใส่ใจหรอก"
+
+    show Albedo b at bit_right with dissolve
+    show Gil s at right with dissolve
+
+    u "งั้นหรอ..."
+
+    u "ข้ามีอะไรจะคุยด้วยหน่อยมาสักเดี๋ยวสิ"
+
+    show Gil b at right with dissolve
+    show Albedo normal at bit_right with dissolve
+
+    a "อืม...เข้าใจแล้ว"
+
+    show Albedo b at bit_right with dissolve
+
+    hide Gil b with dissolve
+    hide Albedo b with dissolve
+
+    show Albedo normal at right with dissolve
+
+    a "ขอโทษด้วยข้าคงต้องขอตัวก่อน"
+
+    show Albedo b at right with dissolve
+    hide Albedo b with dissolve
+
+    "จากนั้นเขาก็เดินจากไปกับชายคนนั้นโดยมี แลนเซอลอต ตามไปฟห่างๆ"
+
+    show Kat normal at right with dissolve
+
+    k "อยากพบกับราชางั้นหรอ?"
+
+    k "ส่วนใหญ่ราชาไม่น่าจะว่างหรอก คนเมื่อกี้ก็เหมือนจะเป็นคนสำคัญด้วย"
+
+    k "ถ้างั้นไปเดินเล่นนอกห้องโถงด้วยกันมั้ย เห็นว่าที่นี่มีสวนสวยๆด้วยนะ"
+
+    show Kat b at right with dissolve
+    hide Kat b with dissolve
+    hide Rika b with dissolve
+
+menu:
+
+    "ไป":
+        show Rika sm at left with dissolve
+
+        r "(พยักหน้า)"
+
+        hide Rika sm with dissolve
+        scene black with fade
+
+        jump garden_1
+
+    "ไม่ไป":
+        show Rika normal at left with dissolve
+
+        r "ขอบคุณที่ชวนนะคะแต่ฉันยังอยากอยู่ที่นี่ต่อ ต้องขอโทษจริงๆค่ะ"
+
+        show Rika b at left with dissolve
+        show Kat normal at right with dissolve
+
+        k "งั้นหรอ..."
+
+        k "ไม่เป็นไรถ้างั้นฉันไปก่อนนะ"
+
+        show Kat b at right with dissolve
+        show Rika sm at left with dissolve
+
+        r "(พยักหน้า)"
+
+        show Rika b at left with dissolve
+        hide Kat b with dissolve
+        hide Rika b with dissolve
+
+        "จากนั้นคุณก็เดินเล่นภายในงานจนกระทั่งชายผมดำที่คุ้นเคยเดินมากล่าวปิดงาน"
+
+        "ผู้คนเริ่มทยอยกลับกันทีละน้อยๆจนเหลือเพียงหยิบมือ"
+
+        "แต่ขณะที่กำลังเหม่อมองผู้คน จู่ๆก็มีเสียงเรียกทักของชายคนหนึ่งดังขึ้น"
+
+        jump chapter_3_3
+    
+
+
+
+
+
+
+
+
+label chapter_3_2:
+       
+    scene bg feast
+    with fade
+    play music "audio/room.mp3" fadein 1.0 fadeout 1.0
+
+    show Kat normal at right with dissolve
+    
+    k "ราชากล่าวจบงานไปแล้วสินะ"
+
+    k "ขอโทษที่ชวนคุยเพลินไปหน่อยหวังว่าจะไม่โกรธกันนะ"
+
+    show Kat b at right with dissolve
+    show Rika sm at left with dissolve
+
+    r "ไม่โกรธหรอกค่ะ ฉันสนุกมากๆเลยที่ได้คุยกับคุณแคท"
+
+    show Rika b at left with dissolve
+    show Kat normal at right with dissolve
+
+    k "เรียกแคทเฉยๆดีกว่านะแล้วก็ไม่ต้องทางการมากก็ได้"
+
+    show Kat b at right with dissolve
+    show Rika sm at left with dissolve
+
+    r "ได้ค่ะ..."
+
+    r "อืมเข้าใจแล้วล่ะ"
+
+    show Rika b at left with dissolve
+
+    "จากนั้นคุณทั้งสองก็สังเกตเห็น เบลมอนท์ ที่กวักมือเบาๆเพื่อเรียก แคท"
+
+    show Kat normal at right with dissolve
+
+    k "ขอโทษด้วยฉันคงต้องกลับแล้วพอดีคฤหาสน์อยู่ไกล บ๊ายบายนะ"
+
+    show Kat at right with dissolve
+    show Rika sm at left with dissolve
+
+    r "(โบกมือ)"
+
+    hide Kat with dissolve
+    show Rika b at left with dissolve
+    hide Rika b with dissolve
+
+    play music "audio/The Remembrace.mp3"
+
+    "จากนั้นคุณก็เดินเล่นภายในงานที่กำลังจะเลิก"
+
+    "เมื่อผู้คนเริ่มทยอยกลับหายไป ชายคนหนึ่งก็เดินเข้ามาหาคุณ"
+
+    jump chapter_3_3
+
+
+
+
+
+
+
+
+
+label chapter_3_3:
+    
+    show Albedo normal at right with dissolve
+
+    a "เจ้าเองหรอ..."
+
+    a "เหมือนตอนนั้นอยากพูดอะไรก่อนข้าไปรึเปล่า"
+
+    show Albedo b at right with dissolve
+    show Rika normal at left with dissolve
+
+    r "(อาเธอร์!)"
+
+    r "ป...เปล่าค่ะ"
+
+    r "คือตอนนั้นฉันแค่อยากขอโทษเหตุการณ์ตอนนั้นเฉยๆค่ะ"
+
+    show Rika b at left with dissolve
+    show Albedo normal at right with dissolve
+
+    a "งั้นหรอ"
+
+    a "แล้วทำไมถึงยังไม่กลับอีกล่ะ คนอื่นๆก็กลับกันจนจะหมดแล้วนะ"
+
+    show Albedo b at right with dissolve
+    
+    "คำถามนั้นทำเอาคุณไปไม่เป็น"
+
+    show Rika normal at left with dissolve
+
+    r "คือแบบว่า...ฉัน..."
+
+    r "ฉ-ฉันยังหาที่พักไม่ได้ค่ะ"
+
+    show Rika b at left with dissolve
+    show Albedo normal at right with dissolve
+
+    a "หาที่พักไม่ได้?"
+
+    a "..."
+
+    a "แล้วรถม้าล่ะ"
+
+    show Albedo b at right with dissolve
+    show Rika normal at left with dissolve
+
+    r "..."
+
+    show Rika b at left with dissolve
+    show Albedo sad at right with dissolve
+
+    a "..."
+
+    show Albedo normal at right with dissolve
+
+    a "ถ้ายังไม่มีที่พักงั้นพักที่นี่ก่อนมั้ยล่ะ"
+
+    show Albedo b at right with dissolve
+    show Rika s at left with dissolve
+
+    r "คะ...?"
+
+    show Rika b at left with dissolve
+    show Albedo normal at right with dissolve
+
+    a "เดี๋ยวเรียกคนใช้ให้พาไปที่ห้องให้ น่าจะมีห้องนอนที่ไม่ค่อยได้ใช้ว่างอยู่ ถ้าอยากได้ของใช้อะไรเพิ่มก็เรียกคนใช้เอาละกันนะ"
+
+    show Albedo b at right with dissolve
+    show Rika s at left with dissolve
+
+    r "ด-เดี๋ยวสิคะ?!"
+
+    show Rika b at left with dissolve
+    show Albedo normal at right with dissolve
+
+    a "อะไร..."
+
+    a "อยากได้ห้องพักไม่ใช่หรอ"
+
+    show Albedo b at right with dissolve
+    show Rika s at left with dissolve
+
+    r "มันก็ใช่ค่ะแต่ว่-"
+
+    show Rika b at left with dissolve
+    show Albedo normal at right with dissolve
+
+    a "เจ้าชื่ออะไร"
+
+    show Albedo b at right with dissolve
+    show Rika normal at left with dissolve
+
+    r "ร...ริกะค่ะ"
+
+    show Rika b at left with dissolve
+    show Albedo sad at right with dissolve
+    show Albedo normal at right with dissolve
+
+    a "งั้นหรอ..."
+
+    a "ถ้างั้นก็...ไว้เจอกันใหม่"
+
+    show Albedo b at right with dissolve
+    hide Albedo b with dissolve
+    show Rika s at left with dissolve
+
+    r "ด-เดี๋ยวสิคะ!"
+
+    show Rika normal at left with dissolve
+
+    r "..."
+
+    show Rika b at left with dissolve
+    hide Rika b with dissolve
+
+    stop music
+    scene black
+    with fade
+
+    "END CHAPTER 3"
+
+    jump chapter_4
+
+
+
+
+
+
+
+
+
+label chapter_4:
+    
+    play sound "audio/Ding.mp3"
+
+    "CHAPTER 4 : สิ่งที่ปิดบัง"
+
+    scene bg bed_r
+    with fade
+    play music "audio/Room.mp3" fadein 1.0 fadeout 1.0
+    show Rika normal at left with dissolve
+
+    r "..."
+
+    r "เมื่อกี้มันเกิดอะไรขึ้นนะ..."
+
+    r "ไหงฉันถึงมาอยู่นี่ได้ ทำไมเขายอมให้ห้องกับฉันได้เนี่ย..."
+
+    r "ทุกอย่าง..."
+
+    r "เกิดขึ้นไวมาก"
+
+    r "ห้องนี้หรูสุดๆไปเลย สมกับเป็นราชวัง"
+
+    show Rika b at left with dissolve
+    
+    "คุณมองท้องฟ้าที่มืดสนิทผ่านกระจกห้องอยู่ครู่หนึ่งก่อนกระโดดลงเตียง"
+
+    show Rika normal at left with dissolve
+
+    r "ช่วยไม่ได้... ยังไม่อยากคิดอะไรให้หนักหัวเลย"
+
+    r "ถ้าโลกนี้มีเวทมนย์บางทีอาจจะมีทางกลับบ้านอยู่ก็ได้"
+
+    r "..."
+
+    r "แต่ว่า...ฉันอยากกลับจริงๆหรอ คนที่อยากเจอก็อยู่ตรงหน้าแถมโลกนี้มันอย่างกับฝัน"
+
+    r "..."
+
+    show Rika a1 at left with dissolve
+
+    r "ช่างเถอะๆ!!"
+
+    r "ไว้คิดพรุ่งนี้ดีกว่าง่วงจะตายแล้ว"
+
+    show Rika b at left with dissolve
+    hide Rika b with dissolve
+
+    "จากนั้นคุณก็หยิบชุดนอนที่ถูกวางเตรียมไว้บนเตียงมาเปลี่ยน"
+
+    scene black with fade
+
+    "คุณหลับไปภายในเวลาไม่นาน"
+
+    stop music
+
+    "..."
+
+    "อีกด้าน ณ ห้องๆหนึ่งที่มีประตูทางเข้าสองบานภายในราชวัง"
+
+    "มีเพียงแสงโคมไฟเล็กๆและโต๊ะกับเก้าอี้ไม้"
+    
+    play sound "audio/Door.mp3"
+    "แอ๊ด---!"
+
+    show Gil s at right with dissolve
+
+    u "มาแล้วหรอ..."
+
+    show Gil b at right with dissolve
+    show Albedo normal at left with dissolve
+
+    a "อืม"
+
+    a "แล้วเจ้ามีอะไรถึงเรียกข้ามา"
+
+    show Albedo b at left with dissolve
+    show Gil s at right with dissolve
+
+    u "ก็หลายๆเรื่อง จะเอาเรื่องไหนก่อนล่ะ"
+
+    show Gil b at right with dissolve
+    show Albedo angry at left with dissolve
+
+    a "รีบๆเข้าเรื่องมีอะไรก็ว่ามา"
+
+    show Albedo b at left with dissolve
+    show Gil s at right with dissolve
+
+    u "ก็ได้ๆ อย่างเพิ่งอารมณ์เสียสิ"
+
+    show Gil normal at right with dissolve
+
+    u "แถวๆทะเลสาบโอชาเนีย พลังงานของที่นั่นแปลกไปราวกับกระแสพลังปั่นป่วน"
+
+    show Gil b at right with dissolve
+    show Albedo sad at left with dissolve
+
+    a "กระแสพลังปั่นป่วนงั้นหรอ..."
+
+    show Albedo b at left with dissolve
+    show Gil normal at right with dissolve
+
+    u "แล้วก็ข้ามีเรื่องจะถามอยู่เรื่องนึง"
+
+    u "ผู้หญิงคนนั้น..."
+
+    u "ทำไมเจ้าถึงยอมให้มาอยู่ในวังได้..."
+
+    u "คนอย่างเจ้าคงไม่ได้คิดเกี่ยวกับเรื่องแนวเสน่หาอยู่แล้ว"
+
+    show Gil b at right with dissolve
+    show Albedo normal at left with dissolve
+
+    a "ผู้หญิงคนนั้น..."
+
+    show Albedo sad at left with dissolve
+
+    a "..."
+
+    show Albedo normal at left with dissolve
+
+    a "ข้าคิดว่าผู้หญิงคนนั้นบางที-"
+
+    show Albedo b at left with dissolve
+
+    play sound "audio/Objectfall.mp3"
+    "ปั่ก!" with vpunch
+
+    show Albedo shock at left with dissolve
+
+    a "นั่นใครน่ะ!"
+
+    show Albedo b at left with dissolve
+    hide Gil b with dissolve
+    hide Albedo b with dissolve
+
+    "ชายผมดำเดินไปยังประตูก่อนจะเดินออกไปดูตรงทางเดิน"
+
+    "แต่ก็พบเพียงตะเกียงไฟที่ดับแล้วร่วงอยู่บนพื้น"
+
+    show Albedo angry at left with dissolve
+
+    a "เจ้าไม่ปิดประตูหรอฝั่งตัวเองหรอ"
+
+    show Albedo b at left with dissolve
+    show Gil normal at right with dissolve
+
+    u "ปิด..."
+
+    u "แต่เหมือนจะไม่สนิท..."
+
+    show Gil s at right with dissolve
+
+    u "แต่ว่าจะตกใจทำไมกัน เจ้าก็น่าจะเดาได้อยู่นี่นาว่านั่นคือใคร"
+
+    show Gil b at right with dissolve
+    show Albedo angry at left with dissolve
+
+    a "..."
+
+    hide Albedo angey with dissolve
+    hide Gil b with dissolve
+
+    jump chapter_4_1
+
+
+
+
+
+
+
+
+
+label chapter_4_1:
+
+    scene bg bed_r with fade
+    play music "audio/Room.mp3"
+
+    show Rika s at left with dissolve
+
+    r "ก...เกือบไปแล้ว"
+
+    show Rika normal at left with dissolve
+
+    r "แต่ว่าเมื่อกี้..."
+
+    r "เขาหมายถึง ฉัน รึเปล่านะ?"
+
+    r "คิดผิดรึเปล่าที่แอบไปฟังเนี่ย..."
+
+    r "ตอนแรกก็แค่จะไปเข้าห้องน้ำเฉยๆแต่ก็เหลือบไปเห็นแสงห้องๆหนึ่งลอดมาเลยแอบส่องดู"
+
+    r "เพราะไม่ค่อยได้ยินที่ทั้งสองคนคุยกัน เลยเผลอขยับตัวเข้าใกล้จนตะเกียงกระแทกประตูซะได้"
+
+    r "ตกใจจนทิ้งตะเกียงไว้ตรงนั้นเลยแฮะ..."
+
+    r "ร...รีบนอนต่อดีกว่า หวังว่าจะไม่โดนจับได้นะ"
+
+    show Rika b at left with dissolve
+    hide Rika b with dissolve
+
+    scene black with fade
+
+    "จากนั้นคุณก็รีบพยายามข่มตาให้หลับอีกครั้งก่อนจะหลับไป"  
+
+    scene bg bed_d with fade
+
+    show Rika normal at left with dissolve
+
+    r "รู้สึกยังไม่หายง่วงดีเลย...เพราะเมื่อคืนเลยนอนไม่หลับซะที"
+
+    r "(มองกระจก) สภาพตัวเองตอนนี้อย่างกับผียังไงไม่รู้"
+
+    r "ในห้องมีอะไรให้ใช้บ้างมั้ยนะ"
+
+    show Rika b at left with dissolve
+    hide Rika b with dissolve
+
+    "คุณจะเลือกค้นตรงไหนก่อนดี"
+
+menu:
+
+    "โต๊ะแต่งหน้า":
+        "คุณเดินไปยังโต๊ะแต่งหน้าก่อนเปิดลิ้นชักของมันดู"
+
+        "ภายในมีเครื่องแป้งและลิปสติกสีอ่อนวางอยู่"
+
+        show Rika normal at left with dissolve
+      
+        r "ของใครรึเปล่าเนี่ย..."
+
+        show Rika b at left with dissolve
+        hide Rika b with dissolve
+  
+        menu:
+            
+            "ตู้เก็บของข้างเตียง":
+                "คุณเดินไปยังตู้เก็บของอันเล็กที่มีโคมไฟวางอยู่ข้างบนก่อนจะเปิดลิ้นชักมันดู"
+
+                "แต่ช่างน่าเสียดายเพราะภายในนั้นว่างเปล่า"
+
+                menu:
+                    "โต๊ะเขียนหนังสือ":
+                        "คุณเดินไปยังโต๊ะไม้สำหรับเขียนหนังสือก่อนจะเปิดลิ้นชักข้างโต๊ะของมัน"
+
+                        "สิ่งที่คุณเจอคือรูปๆหนึ่ง..."
+                
+                        "คุณหยิบมันขึ้นมาอย่างไม่ใส่ใจแต่ก็ต้องช็อค"
+                
+                        jump chapter_4_2
+
+            "โต๊ะเขียนหนังสือ":
+                "คุณเดินไปยังโต๊ะไม้สำหรับเขียนหนังสือก่อนจะเปิดลิ้นชักข้างโต๊ะของมัน"
+
+                "สิ่งที่คุณเจอคือรูปๆหนึ่ง..."
+                
+                "คุณหยิบมันขึ้นมาอย่างไม่ใส่ใจแต่ก็ต้องช็อค"
+                
+                jump chapter_4_2
+
+
+
+
+
+
+    "ตู้เก็บของข้างเตียง":
+        "คุณเดินไปยังตู้เก็บของอันเล็กที่มีโคมไฟวางอยู่ข้างบนก่อนจะเปิดลิ้นชักมันดู"
+
+        "แต่ช่างน่าเสียดายเพราะภายในนั้นว่างเปล่า"
+
+        menu:
+
+            "โต๊ะแต่งหน้า":
+                "คุณเดินไปยังโต๊ะแต่งหน้าก่อนเปิดลิ้นชักของมันดู"
+
+                "ภายในมีเครื่องแป้งและลิปสติกสีอ่อนวางอยู่"
+
+                show Rika normal at left with dissolve
+      
+                r "ของใครรึเปล่าเนี่ย..."
+
+                show Rika b at left with dissolve
+                hide Rika b with dissolve
+                
+                menu:
+                    "โต๊ะเขียนหนังสือ":
+                        "คุณเดินไปยังโต๊ะไม้สำหรับเขียนหนังสือก่อนจะเปิดลิ้นชักข้างโต๊ะของมัน"
+
+                        "สิ่งที่คุณเจอคือรูปๆหนึ่ง..."
+                
+                        "คุณหยิบมันขึ้นมาอย่างไม่ใส่ใจแต่ก็ต้องช็อค"
+                        
+                        jump chapter_4_2
+
+            "โต๊ะเขียนหนังสือ":
+                "คุณเดินไปยังโต๊ะไม้สำหรับเขียนหนังสือก่อนจะเปิดลิ้นชักข้างโต๊ะของมัน"
+
+                "สิ่งที่คุณเจอคือรูปๆหนึ่ง..."
+                
+                "คุณหยิบมันขึ้นมาอย่างไม่ใส่ใจแต่ก็ต้องช็อค"
+                        
+                jump chapter_4_2
+
+
+
+
+    "โต๊ะเขียนหนังสือ":
+        "คุณเดินไปยังโต๊ะไม้สำหรับเขียนหนังสือก่อนจะเปิดลิ้นชักข้างโต๊ะของมัน"
+
+        "สิ่งที่คุณเจอคือรูปๆหนึ่ง..."
+                
+        "คุณหยิบมันขึ้นมาอย่างไม่ใส่ใจแต่ก็ต้องช็อค"
+                        
+        jump chapter_4_2
+
+
+
+
+
+
+
+
+
+label chapter_4_2:
+
+    show Rika s at left with dissolve
+
+    r "นี่มันเรื่องบ้าอะไรกัน..."
+
+    show Rika b at left with dissolve
+    hide Rika b with dissolve
+
+    scene black with fade
+    
+    "ตรงหน้าของคุณคือรูปภาพที่ดูเก่าเล็กน้อยแต่รายละเอียดนั้นอยู่ครบ"
+
+    "ภาพนั้นคือรูปของคุณกับผู้คนอีก 12 คน"
+
+    "ในภาพคุณและพวกเขาดูสนิทกันมาก"
+
+    "และ 3 คนในนั้นคือคนที่คุณรู้จักและเคยเห็น"
+
+    "ชายผมทองในชุดเกราะทองเด่นและดวงตาที่หยิ่งทนงเหมือนสัตว์ป่า"
+
+    "หญิงสาวผมสีแดงอันเป็นเอกลักษณ์กับดวงตาที่เป็นประกาย"
+
+    "และอีกคน...ชายผมดำในตาสีแดงราวอัญมณีกาเน็ตและใบหน้าที่เย็นชา"
+
+    "คนที่เหลือในภาพคือคนที่คุณไม่รู้จัก แต่ทุกคนแต่งชุดที่ดูแปลกตาอย่างบอกไม่ถูก"
+
+    "สิ่งเดียวในหัวของคุณคือ ทำไมถึงมีรูปคุณกับพวกเขาเหล่านี้ได้ทั้งๆที่คุณไม่ใช่คนของโลกนี้ด้วยซ้ำ แถมยังดูสนิทกันมาก"
+
+    "นี่มันหมายความว่ายังไงกันแน่..."
+
+    "END CHAPTER 4"
+
+    "-โปรดติดตามเรื่องราวในอัปเดตต่อไป-"
+
+    return
+
+
+
+    
+
+
+
+
+
+
+
+
+
+label normal_end:
+    
+       scene bg bed
+
+       show Rika_c t at left
+       with dissolve
+
+       r "ทำไม...ถึงรู้สึกเศร้าแปลกๆกันนะ"
+
+       r "ช่างเถอะมันไม่สำคัญหรอกพรุ่งนี้มีสอบอีกนี่นา น่าเบื่อชะมัด"
+
+       scene black
+       with dissolve
+
+       "แล้วคุณก็หลับไปทั้งอย่างนั้นและดำเนินชีวิตประจำวันอย่างที่เป็นมาตลอด"
+
+       "NORMAL END : ชีวิตอันแสนปกติ" 
+
+       return
+
+label water_end:
+
+       scene bg lake
+       with vpunch
+
+       play sound "audio/Underwater.mp3"
+       "แต่ทันใดนั้นขาของคุณก็จมลงทันใด"
+
+       "รู้ตัวอีกทีคุณก็อยู่ใต้ทะเลก่อนค่อยๆจมลงแม้จะพยายามตะเกียดตะกาย"
+
+       scene black
+       with dissolve
+
+       "DEAD END : ยามทะเลสาบเรียกหา"
+
+       return
+
+label white_wine:
+
+       show men at right with dissolve
+
+       u "เลดี้ท่านนั้นรอเดี๋ยวก่อน"
+
+       "ชายวัยกลางคนคนหนึ่งเดินเข้ามาหาคุณ"
+
+       u "ขออภัยเลดี้นั่นเป็นขวดไวน์ส่วนตัวของข้า"
+
+       show Rika s at left with dissolve
+
+       r "ข-ขอโทษค่ะ!"
+
+       show Rika b at left with dissolve
+
+       hide men with dissolve
+       hide Rika b with dissolve
+
+       "คุณจึงต้องวางมันลงก่อนหยิบไวน์แดงที่อยู่ข้างๆ"
+
+       jump chapter_3_1
+
+label ปฏิเสธ:
+
+    "เขาเข้าใจคุณและไม่ได้บังคับอะไร"
+
+    "คุณทั้งสองคุยกันต่อได้สักพักก็มีหญิงคนหนึ่งเดินเข้ามาที่โต๊ะของพวกคุณ"
+
+    hide Lan b with dissolve
+    show Lan b at bit_left with dissolve
+    show Kat normal at right with dissolve
+
+    u "ทำอะไรของนายอยู่น่ะแลน มัวแต่คุยกับผู้หญิงอยู่ได้"
+
+    show Kat b at right with dissolve
+    show Lan normal at bit_left with dissolve
+
+    l "ทำตัวให้เหมาะสมหน่อยเถอะตรงนี้ไม่ได้มีแค่ข้านะ"
+
+    show Lan b at bit_left with dissolve
+    show Kat normal at right with dissolve
+
+    u "รู้แล้วน่า"
+
+    u "เพราะงั้นก็มาได้แล้ว"
+
+    show Kat b at right with dissolve
+    show Lan normal at bit_left with dissolve
+
+    l "เข้าใจแล้วๆ"
+
+    show Lan b at bit_left with dissolve
+    hide Kat b with dissolve
+
+    "เขาหันกลับมามองที่คุณก่อนจะบอกลา"
+
+    hide Lan b with dissolve
+    show Lan sm at right with dissolve
+
+    l "ต้องขอโทษด้วยแต่ข้าคงต้องไปแล้ว"
+
+    show Lan b at right with dissolve
+    hide Lan b with dissolve
+
+    "จากนั้นเขาก็เดินจากไปพร้อมกับผู้หญิงผมแดงคนนั้น"
+
+    hide Rika b with dissolve
+    
+    "หลังจากนั้นคุณก็ได้แต่นั่งเฉยๆไปเรื่อยจนกระทั่ง..."
+
+    "สายตาของคุณก็ได้เหลือบไปเห็นใครบางคน"
+
+    "ชายผมดำสนิดเเละชุดสีดำพร้อมผ้าคลุมยาวไม่ว่าจะมองสักกี่ทีก็ยังดูสง่าเเม้เห็นเพียงข้างหลัง ความรู้สึกคุ้นเคยเเล่นผ่านตัวของคุณอย่างรวดเร็ว"
+
+    r "(นั่นเขาหรอ...)"
+
+    "ไม่หรอกจะเป็นเขาไปได้ยังไงกัน ความสงสัยถาโถมเข้าหาคุณ"
+
+    "ระหว่างนั้นความตื่นเต้นเเละคาดหวังก็เกิดขึ้นในใจคุณ คนที่คุณปราถนาที่จะได้พบมากที่สุดเเละเป็นคนที่คุณกล้าบอกว่าเป็นดั่งคนสำคัญเเม้ไม่เคยพบมาก่อน"
+
+    "ถ้าการหลุดมาต่างยุคสมัยยังเกิดขึ้นได้ถ้าอย่างงั้นทำไมการได้พบเขาในที่เเห่งนี้จะเป็นไปไม่ได้กัน"
+
+    scene black
+    with dissolve
+
+    "END CHAPTER 2"
+
+    jump chapter_3
+
+label garden_1:
+
+    scene bg garden
+    with fade
+    play music "audio/Fountain.mp3" fadein 1.0 fadeout 1.0
+    
+    "จากนั้นคุณทั้งคู่ก็เดินออกจากห้องโถงมายังสวนในวัง กลางสวนมีน้ำพุอยู่ตรงกลางเด่น"
+
+    "เสียงน้ำพาให้คุณผ่อนคลายจริงๆ"
+
+    "จากนั้น แคท จึงชวนคุณไปนั่งที่เก้าอี้ใกล้น้ำพุ"
+
+    show Kat normal at right with dissolve
+
+    k "สงบจริงๆนะตรงนี้..."
+
+    k "อยู่ด้านในมันออกจะวุ่นวายไปหน่อย เปลี่ยนบรรยากาศมาตรงนี้ก็ไม่แย่นะเธอคิดว่าไง"
+
+    show Kat b at right with dissolve
+    hide Kat b with dissolve
+
+menu:
+    
+    "มันดูเงียบเกินไปหน่อย":
+     
+        show Rika normal at left with dissolve
+
+        r "แต่ฉันว่ามันดูเงียบเกินไปหน่อยนะคะ..."
+
+        show Rika b at left with dissolve
+        show Kat normal at right with dissolve
+
+        k "งั้นหรอ..."
+
+        k "แต่ถ้าเธอไม่ว่าอะไรฉันก็จะถือว่าเราจะยังนั่งเล่นตรงนี้สักพักละกันนะ"
+
+        show Kat b at right with dissolve
+
+        jump garden_2
+
+    "ชอบเหมือนกัน":
+        
+        show Rika sm at left with dissolve
+
+        r "ฉันก็คิดเหมือนกันค่ะ"
+
+        show Rika b at left with dissolve
+        show Kat j at right with dissolve
+
+        k "ใช่ม้าๆ!"
+
+        show Kat b at right with dissolve
+
+        jump garden_2
+
+label garden_2:
+    
+    show Rika normal at left with dissolve
+
+    r "จริงๆฉันมีเรื่องอยากถามคุณอยู่ ฉันขอถามได้มั้ยคะ"
+
+    show Rika b at left with dissolve
+    show Kat normal at right with dissolve
+
+    k "ได้สิ"
+
+    show Kat b at right with dissolve
+    show Rika normal at left with dissolve
+
+    r "คือฉันอยากให้คุณช่วยเล่าเรื่องของที่นี่ให้ฟังหน่อยได้มั้ยคะ"
+
+    show Rika b at left with dissolve
+    show Kat s at right with dissolve
+
+    k "เธอหมายความว่าไง...?"
+
+    show Kat b at right with dissolve
+    show Rika normal at left with dissolve
+
+    r "คือฉัน..."
+
+    r "คือฉันเพิ่งเคยมาที่นี่เป็นครั้งแรก..."
+
+    show Rika b at left with dissolve
+    show Kat normal at right with dissolve
+
+    k "..."
+
+    k "งั้นเองหรอ"
+
+    k "ที่นี่คือราชวังหลักของอาณาจักร เอเธคริส หรืออีกหนึ่งฉายา นครทองคำขาว"
+
+    k "โดยราชวังนี้มีชื่อเรียกว่า ราชวังคาเมลอต"
+
+    k "กษัตริย์องค์ปัจจุบันก็คือคนที่เธอเจอไปนั่นแหละ ถ้าจำไม่ผิดน่าจะชื่อ..."
+
+    k "อาเธอร์ เพนดราก้อน ละมั้งนะ"
+
+    k "แต่บอกตามตรงไม่มีใครรู้ชื่อจริงๆของเขาหรอก เพราะยังไงนี่ก็แค่ชื่อที่มีให้เรียกตอนได้ขึ้นเป็นกษัตริย์เท่านั้นแหละ"
+
+    show Kat b at right with dissolve
+    show Rika normal at left with dissolve
+
+    r "อาเธอร์งั้นหรอ..."
+
+    show Rika b at left with dissolve
+    show Kat normal at right with dissolve
+
+    k "อืม"
+
+    k "แต่ทั้งที่เจ้าตัวก็เป็นกษัตริย์ของนครทองคำขาวแท้ๆ กลับเป็นพวกบ้าชอบใส่ชุดดำซะงั้น"
+
+    k "ใครๆก็ว่านิสัยเย็นชาสุดๆ"
+
+    show Kat j at right with dissolve
+
+    k "ก็หมอนั่นเย็นชาจนเคยมีเด็กว่าว่าเป็นเทพผู้นำหายนะตามนิทานเลย"
+
+    show Kat b at right with dissolve
+    show Rika normal at left with dissolve
+
+    r "ขนาดนั้นเลยหรอคะ"
+
+    r "จะว่าไปเมื่อกี้คุณพูดถึงนิทาน..."
+
+    show Rika b at left with dissolve
+    show Kat normal at right with dissolve
+
+    k "นี่เธอไม่รู้จักหรอ?"
+
+    k "ใครๆเขาก็รู้จักกันทั้งนั้น ไปอยู่ไหนมาเนี่ย"
+
+    k "จริงๆก็ไม่เชิงนิทานหรอก ออกแนวไปทางตำนานไม่ก็ปรัมปรามากกว่า"
+
+    k "ถ้างั้นฉันเล่าให้ฟังก็ได้"
+
+    show Kat b at right with dissolve
+    hide Kat b with dissolve
+    hide Rika b with dissolve
+
+    "จากนั้นหญิงสาวก็เล่านิทาน(?)ให้คุณฟัง"
+
+    "เรื่องราวของต้นกำเนิดโลก เทพเจ้า และเหล่า 12 วีรชนผู้กอบกู้โลก"
+
+    "อีกทั้งเธอยังเล่าถึงเรื่องต่างของเมืองและโลกให้ฟังทำให้คุณรู้ว่าโลกนี้มีเวทมนต์หรือที่เรียกกันว่า ปฏิหาริย์"
+
+    show Kat normal at right with dissolve
+
+    k "ก็ประมาณนี้แหละ..."
+
+    k "(มองพระจันทร์)"
+
+    k "ดูเหมือนจะเล่าเพลินไปหน่อยตอนนี้คงใกล้เลิกงานแล้วล่ะมั้ง"
+
+    k "กลับเข้าด้านในกันเถอะ"
+
+    show Kat b at right with dissolve
+    show Rika sm at left with dissolve
+
+    r "(พยักหน้า)"
+
+    show Rika b at left with dissolve
+    hide Kat b with dissolve
+    hide Rika b with dissolve
+
+    scene black
+    with fade
+
+    jump chapter_3_2
